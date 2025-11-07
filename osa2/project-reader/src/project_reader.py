@@ -10,15 +10,16 @@ class ProjectReader:
     def get_project(self):
         # tiedoston merkkijonomuotoinen sisältö
         content = request.urlopen(self._url).read().decode("utf-8")
-        print(content)
 
         data = toml.loads(content)
         toml_data = data["tool"]["poetry"]
 
         name = toml_data.get("name")
         description = toml_data.get("description", "")
+        license = toml_data.get("license", "")
+        authors = toml_data.get("authors", [])
         dependencies = list(toml_data.get("dependencies", {}).keys())
         dev_dependencies = list(toml_data.get("development dependencies", {}).keys())
 
         # deserialisoi TOML-formaatissa oleva merkkijono ja muodosta Project-olio sen tietojen perusteella
-        return Project(name, description, dependencies, dev_dependencies)
+        return Project(name, description, license, authors, dependencies, dev_dependencies)
