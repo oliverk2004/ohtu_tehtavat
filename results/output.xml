@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.11 on win32)" generated="20251113 20:02:23.859" rpa="false" schemaversion="4">
+<suite id="s1" name="Ohtu Tehtavat" source="C:\kurssit\ohjelmistotuotanto\ohtu_tehtavat">
+<suite id="s1-s1" name="Osa3" source="C:\kurssit\ohjelmistotuotanto\ohtu_tehtavat\osa3">
+<suite id="s1-s1-s1" name="Login-Robot" source="C:\kurssit\ohjelmistotuotanto\ohtu_tehtavat\osa3\login-robot">
+<suite id="s1-s1-s1-s1" name="Src" source="C:\kurssit\ohjelmistotuotanto\ohtu_tehtavat\osa3\login-robot\src">
+<suite id="s1-s1-s1-s1-s1" name="Tests" source="C:\kurssit\ohjelmistotuotanto\ohtu_tehtavat\osa3\login-robot\src\tests">
+<suite id="s1-s1-s1-s1-s1-s1" name="Login" source="C:\kurssit\ohjelmistotuotanto\ohtu_tehtavat\osa3\login-robot\src\tests\login.robot">
+<test id="s1-s1-s1-s1-s1-s1-t1" name="Login With Incorrect Password" line="10">
+<kw name="Create User And Input Login Command" type="SETUP">
+<kw name="Create User" library="AppLibrary">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" starttime="20251113 20:02:24.042" endtime="20251113 20:02:24.043"/>
+</kw>
+<kw name="Input Login Command" library="resource">
+<kw name="Input" library="AppLibrary">
+<arg>login</arg>
+<status status="PASS" starttime="20251113 20:02:24.046" endtime="20251113 20:02:24.047"/>
+</kw>
+<status status="PASS" starttime="20251113 20:02:24.044" endtime="20251113 20:02:24.047"/>
+</kw>
+<status status="PASS" starttime="20251113 20:02:24.041" endtime="20251113 20:02:24.047"/>
+</kw>
+<kw name="Input Credentials" library="resource">
+<arg>kalle kalle321</arg>
+<msg timestamp="20251113 20:02:24.049" level="FAIL">Keyword 'resource.Input Credentials' expected 2 arguments, got 1.</msg>
+<status status="FAIL" starttime="20251113 20:02:24.048" endtime="20251113 20:02:24.092"/>
+</kw>
+<kw name="Output Should Contain" library="AppLibrary">
+<arg>Invalid username or password</arg>
+<status status="NOT RUN" starttime="20251113 20:02:24.096" endtime="20251113 20:02:24.097"/>
+</kw>
+<status status="FAIL" starttime="20251113 20:02:24.035" endtime="20251113 20:02:24.101">Keyword 'resource.Input Credentials' expected 2 arguments, got 1.</status>
+</test>
+<status status="FAIL" starttime="20251113 20:02:23.995" endtime="20251113 20:02:24.129"/>
+</suite>
+<status status="FAIL" starttime="20251113 20:02:23.985" endtime="20251113 20:02:24.175"/>
+</suite>
+<status status="FAIL" starttime="20251113 20:02:23.971" endtime="20251113 20:02:24.192"/>
+</suite>
+<status status="FAIL" starttime="20251113 20:02:23.960" endtime="20251113 20:02:24.211"/>
+</suite>
+<status status="FAIL" starttime="20251113 20:02:23.945" endtime="20251113 20:02:24.238"/>
+</suite>
+<status status="FAIL" starttime="20251113 20:02:23.885" endtime="20251113 20:02:24.242"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Ohtu Tehtavat">Ohtu Tehtavat</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Osa3">Ohtu Tehtavat.Osa3</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Login-Robot">Ohtu Tehtavat.Osa3.Login-Robot</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Src">Ohtu Tehtavat.Osa3.Login-Robot.Src</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="Tests">Ohtu Tehtavat.Osa3.Login-Robot.Src.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1-s1" name="Login">Ohtu Tehtavat.Osa3.Login-Robot.Src.Tests.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
